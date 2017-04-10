@@ -1,0 +1,17 @@
+{
+  "name": "animations",
+  "version": "1.0.0",
+  "description": "css animations",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "BlisS"
+  ],
+  "author": "BlisS",
+  "license": "MIT",
+  "devDependencies": {
+    "localtunnel": "^1.8.2"
+  }
+}

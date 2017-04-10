@@ -1,0 +1,282 @@
+body {
+	margin: 0;
+}
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+#top-container{
+	background: #0bc770;
+	min-height: 100px;
+	padding: 230px 0;
+}
+
+#block {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	background: #fff url(../images/block.png) no-repeat 50%;
+	animation-name: fadeIn;
+}
+
+.animated {
+	animation-duration: 1s;
+/*	animation-iteration-count: 3;
+	animation-direction: reverse;
+	animation-direction: alternate;
+	animation-delay: 2s;*/
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+	animation-fill-mode:both;
+}
+
+#block:hover{
+	animation-name: fadeOut;
+}
+
+
+
+@keyframes fadeIn {
+	0% { 
+		opacity:0; 
+		transform: perspective(400px) rotateX(90deg);
+	}
+
+	100% { 
+		opacity:100; 
+		transform: perspective(400px) rotateX(-30deg);
+	}
+}
+
+@keyframes fadeOut {
+	0% { 
+		
+		transform: perspective(400px) rotateX(-30deg);
+	}
+
+	100% { 
+		
+		transform: perspective(400px) rotateX(90deg);
+	}
+}
+
+/*@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		width: 100px;
+		height: 100px;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: .5;
+		width: 200px;
+		height: 200px;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		width: 0px;
+		height: 0px;
+	}
+}*/
+
+
+
+
+/*Second project*/
+#second-container{
+	background: #3da1ff;
+	min-height: 200px;
+	padding: 50px 0;
+}
+
+#ladybug{
+	width: 257px;
+	height: 191px;
+	margin: 2% auto;
+	background: url(../images/sprite.png) left center;
+	animation: play .8s steps(12) infinite;
+}
+
+@keyframes play {
+	0% {
+		background-position: -3084px;
+	}
+	100% {
+		background-position: 0;
+	}
+}
+
+
+
+/*Tercer projecto*/
+
+.clearfix{
+	display:block;
+	clear:both;
+}
+
+#third-container{
+	background: #000 url(../images/bg.jpg) repeat-x fixed;
+}
+
+#third-container h1, h2 {
+	color: #fff;
+	font-family: "source Sans Pro";
+	text-align: center;
+}
+
+#third-container h1{
+	margin: 100px 0;
+	font-size: 4em;
+}
+
+a.img-click {
+	border: 10px solid #000;
+	display: block;
+}
+
+#third-container span {
+	font-size: 1em;
+	color:#848484;
+}
+
+#third-container h2 {
+	font-size: 1.5em;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+.img-info{
+	position: absolute;
+	background: #000;
+	bottom: 0;
+	padding: 12px;
+	text-align: center;
+	/*opacity: 0;*/
+	visibility: hidden;
+}
+
+.img-click img{
+	opacity: .6;
+}
+
+.secondary {
+	margin: 50px 0 200px 0;
+}
+
+
+.img-container {
+	transform: perspective(400px) rotateY(8deg);
+	width: 90%;
+}
+
+.img-container:hover {
+	animation-name: thumbTilt;
+	animation-duration: 1s;
+	animation-fill-mode:both;
+	transition-timing-function:ease-in;
+}
+
+@keyframes thumbTilt {
+	0% {
+		transform: perspective(400px) rotateY(8deg) scale(1);
+	}
+	20% {
+		transform: perspective(400px) rotateY(-13deg) scale(1.1);
+	}
+	100% {
+		transform: perspective(400px) rotateY(0deg) scale(1.2);
+	}
+}
+
+
+.img-container:hover .img-info{
+	animation-name: infoSlide;
+	animation-duration: 1s;
+	animation-fill-mode:both;
+	transition-timing-function:ease-in;
+}
+
+@keyframes infoSlide{
+	0%{
+		opacity: 0;
+		transform: translateX(15px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+		visibility: visible;
+	}
+}
+
+.img-click img:hover{
+	animation-name: imgTransparency;
+	animation-duration: 1s;
+	animation-fill-mode:both;
+	transition-timing-function:ease-in;
+}
+
+@keyframes imgTransparency{
+	0% {
+		opacity: .6;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+@media only screen and (max-width: 64.063em) {
+	#third-container h2 {
+		font-size: 1em;
+	}
+
+	#third-container span {
+		font-size: .8em;
+	}
+
+	 a.img-click {
+		border: 5px solid #000;
+	}
+}
+
+@media only screen and (max-width: 62em) {
+	 .img-container {
+		width: 50%;
+		margin: 0 auto 20px auto;
+		transform:perspective(400px) rotateY(0deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
